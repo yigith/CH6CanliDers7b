@@ -8,7 +8,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudOrnek", "CrudOrnek\CrudOrnek.csproj", "{7FA49E26-9440-4537-93E9-88080077D6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieWorld", "MovieWorld\MovieWorld.csproj", "{F70901C6-689D-47D0-B897-384363841238}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FA49E26-9440-4537-93E9-88080077D6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA49E26-9440-4537-93E9-88080077D6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA49E26-9440-4537-93E9-88080077D6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA49E26-9440-4537-93E9-88080077D6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70901C6-689D-47D0-B897-384363841238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70901C6-689D-47D0-B897-384363841238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70901C6-689D-47D0-B897-384363841238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70901C6-689D-47D0-B897-384363841238}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
