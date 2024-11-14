@@ -1,5 +1,34 @@
 ﻿# CH6 - Canlı Ders 7b
 
+## CRUD (Create/Read/Update/Delete)
+
+### PACKAGES
+```
+INSTALL-PACKAGE Npgsql
+```
+
+### CONNECTION STRING
+```
+Host=localhost;Port=5432;Username=postgres;Password=******;Database=dbname
+```
+
+### SQL
+
+```sql
+CREATE TABLE ogrenciler
+(
+	id BIGINT GENERATED ALWAYS AS IDENTITY,
+	ad VARCHAR(100) NOT NULL,
+	cinsiyet CHAR(1) NOT NULL,
+	dogum_yili INT
+);
+
+INSERT INTO ogrenciler(ad, cinsiyet, dogum_yili) VALUES('Eda', 'k', 2004);
+INSERT INTO ogrenciler(ad, cinsiyet, dogum_yili) VALUES('Ali', 'e', 2000);
+INSERT INTO ogrenciler(ad, cinsiyet, dogum_yili) VALUES('Ece', 'k', 2000);
+INSERT INTO ogrenciler(ad, cinsiyet, dogum_yili) VALUES('Cem', 'e', 1998);
+```
+
 ## IMDB TOP 100
 
 ### SQL
@@ -8,12 +37,12 @@ Verilerin alındığı tarih: 14 Kasım 2024
 
 ```sql
 CREATE TABLE Movies (
-    id VARCHAR(10) PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    year INTEGER,
-    duration VARCHAR(7),
-    rating DECIMAL(3, 1) CHECK (rating >= 0 AND rating <= 10),
-    description TEXT
+	id VARCHAR(10) PRIMARY KEY,
+	title VARCHAR(255) NOT NULL,
+	year INTEGER,
+	duration VARCHAR(7),
+	rating DECIMAL(3, 1) CHECK (rating >= 0 AND rating <= 10),
+	description TEXT
 );
 
 INSERT INTO Movies(id, title, year, duration, rating, description) VALUES ('tt0111161', 'The Shawshank Redemption', 1994, '2h 22m', 9.3, 'A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.');
