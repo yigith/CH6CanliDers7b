@@ -34,6 +34,8 @@
             lblRating = new Label();
             lblDescription = new Label();
             btnMoviePage = new Button();
+            txtAra = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvMovies).BeginInit();
             SuspendLayout();
             // 
@@ -41,6 +43,7 @@
             // 
             dgvMovies.AllowUserToAddRows = false;
             dgvMovies.AllowUserToDeleteRows = false;
+            dgvMovies.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvMovies.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvMovies.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvMovies.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -55,19 +58,21 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            lblTitle.Location = new Point(497, 22);
+            lblTitle.Location = new Point(497, 60);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(346, 163);
+            lblTitle.Size = new Size(346, 150);
             lblTitle.TabIndex = 1;
             lblTitle.Text = "Movie Title";
             lblTitle.TextAlign = ContentAlignment.BottomLeft;
             // 
             // lblYear
             // 
+            lblYear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblYear.AutoSize = true;
             lblYear.Font = new Font("Segoe UI", 16F);
-            lblYear.Location = new Point(503, 194);
+            lblYear.Location = new Point(503, 219);
             lblYear.Name = "lblYear";
             lblYear.Size = new Size(75, 30);
             lblYear.TabIndex = 2;
@@ -75,9 +80,10 @@
             // 
             // lblRating
             // 
+            lblRating.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblRating.AutoSize = true;
             lblRating.Font = new Font("Segoe UI", 16F);
-            lblRating.Location = new Point(584, 194);
+            lblRating.Location = new Point(584, 219);
             lblRating.Name = "lblRating";
             lblRating.Size = new Size(75, 30);
             lblRating.TabIndex = 3;
@@ -85,14 +91,16 @@
             // 
             // lblDescription
             // 
-            lblDescription.Location = new Point(503, 235);
+            lblDescription.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblDescription.Location = new Point(503, 272);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(340, 273);
+            lblDescription.Size = new Size(340, 255);
             lblDescription.TabIndex = 4;
             lblDescription.Text = "...";
             // 
             // btnMoviePage
             // 
+            btnMoviePage.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnMoviePage.Location = new Point(497, 544);
             btnMoviePage.Name = "btnMoviePage";
             btnMoviePage.Size = new Size(346, 23);
@@ -101,11 +109,32 @@
             btnMoviePage.UseVisualStyleBackColor = true;
             btnMoviePage.Click += btnMoviePage_Click;
             // 
+            // txtAra
+            // 
+            txtAra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtAra.Location = new Point(560, 22);
+            txtAra.Name = "txtAra";
+            txtAra.Size = new Size(270, 23);
+            txtAra.TabIndex = 6;
+            txtAra.TextChanged += txtAra_TextChanged;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Location = new Point(529, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(25, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Ara";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(855, 579);
+            Controls.Add(label1);
+            Controls.Add(txtAra);
             Controls.Add(btnMoviePage);
             Controls.Add(lblDescription);
             Controls.Add(lblRating);
@@ -128,5 +157,7 @@
         private Label lblRating;
         private Label lblDescription;
         private Button btnMoviePage;
+        private TextBox txtAra;
+        private Label label1;
     }
 }

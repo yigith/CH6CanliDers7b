@@ -18,9 +18,17 @@ namespace MovieWorld
             DisplayMovies();
         }
 
-        private void DisplayMovies()
+        private void DisplayMovies(string ara = "")
         {
-            var cmd = new NpgsqlCommand("SELECT id, title, year, duration, rating, description FROM movies", con);
+            string sql = "SELECT id, title, year, duration, rating, description FROM movies";
+
+            if (!string.IsNullOrEmpty(ara))
+            {
+                sql += " WHERE title ILIKE '%' || @p0 || '%' OR description ILIKE '%' || @p0 || '%' OR CAST(year AS TEXT) ILIKE '%' || @p0 || '%'";
+            }
+
+            var cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@p0", ara);
             var dr = cmd.ExecuteReader();
 
             movies = new List<Movie>();
@@ -74,6 +82,11 @@ namespace MovieWorld
                 UseShellExecute = true
             };
             Process.Start(psInfo);
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            DisplayMovies(txtAra.Text);
         }
     }
 }
